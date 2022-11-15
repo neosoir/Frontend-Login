@@ -19,16 +19,10 @@
  * Text Domain:       fronted-login
  */
 
-//if ( ! defined( 'PLZ_PATH' ) ) 
+if ( ! defined( 'PLZ_PATH' ) ) 
     define( 'PLZ_PATH', plugin_dir_path( __FILE__ ) );
 
-    var_dump(PLZ_PATH);
-
-//if ( ! defined( 'PLZ_URL' ) )
+if ( ! defined( 'PLZ_URL' ) )
     define( 'PLZ_URL', plugin_dir_url( __FILE__ ) );
 
-    var_dump(PLZ_URL);
-
-
-//
 require_once PLZ_PATH . 'blocks/register/index.php';

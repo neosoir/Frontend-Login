@@ -4,7 +4,7 @@ add_action( 'init', 'plz_register_blocks' );
 
 function plz_register_blocks() {
 
-    $assets_file = include_once PLZ_PLATH . 'blocks/register/build/index.asset.php';
+    $assets_file = include_once PLZ_PATH . 'blocks/register/build/index.asset.php';
 
     wp_register_script(
         'plz-register-block',
