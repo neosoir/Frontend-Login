@@ -1,8 +1,8 @@
 <?php
 
-add_action( 'init', 'plz_news_blocks_init' );
+add_action( 'init', 'plz_news_block_init' );
 
-function plz_news_blocks_init() {
+function plz_news_block_init() {
 
     register_block_type(
 

@@ -1,8 +1,13 @@
+import { useBlockProps } from "@wordpress/block-editor";
+
+
 const Edit = ( props ) => {
 
+    const blockProps = useBlockProps();
+    
     return (
 
-        <p>Hola</p>
+        <p { ...blockProps }>Hola</p>
 
     );
 

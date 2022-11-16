@@ -2,7 +2,7 @@
 
     "apiVersion": 2,
     "name": "plz/news",
-    "title": "news",
+    "title": "News",
     "category": "widgets",
     "icon": "list-view",
     "description": "Show news.",
