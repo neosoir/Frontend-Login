@@ -6,7 +6,7 @@ import { Panel, PanelBody, TextControl } from "@wordpress/components";
 const Edit = ( props ) => {
 
     const { className, attributes, setAttributes } = props;
-    const { title, nameLabel, nameEmail, namePassword } = attributes;
+    const { title, nameLabel, emailLabel, passwordLabel } = attributes;
 
     return (
 
@@ -20,14 +20,14 @@ const Edit = ( props ) => {
                         onChange={ ( newLabel ) => setAttributes( { nameLabel: newLabel } ) }
                     />
                     <TextControl 
-                        label="Name Email"
-                        value={nameEmail}
-                        onChange={ ( newLabel ) => setAttributes( { nameEmail: newLabel } ) }
+                        label="Email Label"
+                        value={emailLabel}
+                        onChange={ ( newLabel ) => setAttributes( { emailLabel: newLabel } ) }
                     />
                     <TextControl 
-                        label="Name Password"
-                        value={namePassword}
-                        onChange={ ( newLabel ) => setAttributes( { namePassword: newLabel } ) }
+                        label="Password Label"
+                        value={passwordLabel}
+                        onChange={ ( newLabel ) => setAttributes( { passwordLabel: newLabel } ) }
                     />
                 </PanelBody>
             </Panel>
@@ -49,11 +49,11 @@ const Edit = ( props ) => {
                         <input name="name" type="text" id="Name" />
                     </div>
                     <div className="signin__email name--campo">
-                        <label for="email">{ nameEmail }</label>
+                        <label for="email">{ emailLabel }</label>
                         <input name="email" type="email" id="email" />
                     </div>
                     <div className="signin__pass name--campo">
-                        <label for="password">{ namePassword }</label>
+                        <label for="password">{ passwordLabel }</label>
                         <input name="password" type="password" id="password" />
                     </div>
                     <div className="signin__submit">

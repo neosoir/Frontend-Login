@@ -28,8 +28,9 @@ function plz_register_blocks() {
 
 		'plz/register',
 		[ 
-			'editor_script'	=> 'plz-register-block', 
-			'style' 		=> 'plz-register-block',
+			'editor_script'	=> 	'plz-register-block', 
+			'script'		=>	'plz-registro',
+			'style' 		=> 	'plz-register-block',
 		],
 
 
