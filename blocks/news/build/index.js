@@ -53,10 +53,10 @@ module.exports = window["wp"]["element"];
 
 /***/ }),
 
-/***/ "./news/blocks.json":
-/*!**************************!*\
-  !*** ./news/blocks.json ***!
-  \**************************/
+/***/ "./news/block.json":
+/*!*************************!*\
+  !*** ./news/block.json ***!
+  \*************************/
 /***/ (function(module) {
 
 module.exports = JSON.parse('{"apiVersion":2,"name":"plz/news","title":"News","category":"widgets","icon":"list-view","description":"Show news.","keywords":["posts","news","plz"],"version":"0.0.1","textdomain":"plz","editorScript":"file:./build/index.js"}');
@@ -140,12 +140,12 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
 /* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _blocks_json__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../blocks.json */ "./news/blocks.json");
+/* harmony import */ var _block_json__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../block.json */ "./news/block.json");
 /* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./edit */ "./news/src/edit.js");
 
 
 
-(0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__.registerBlockType)(_blocks_json__WEBPACK_IMPORTED_MODULE_1__, {
+(0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__.registerBlockType)(_block_json__WEBPACK_IMPORTED_MODULE_1__, {
   edit: _edit__WEBPACK_IMPORTED_MODULE_2__["default"],
   save: () => null
 });
