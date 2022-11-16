@@ -25,8 +25,23 @@ registerBlockType( "plz/register", {
         passwordLabel: {
             type: "string",
             default: "Password"
+        },
+        text: {
+            source: "html",
+            selector: "p"
         }
     },
+    styles: [
+        {
+            name: "light",
+            label: "Light Mode",
+            isDefault: true
+        },
+        {
+            name: "dark",
+            label: "Dark Mode",
+        }
+    ],
     edit,
     save,
 

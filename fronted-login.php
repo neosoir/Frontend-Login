@@ -31,3 +31,4 @@ require_once PLZ_PATH . "includes/API/api-login.php";
 
 // Blocks.
 require_once PLZ_PATH . 'blocks/register/index.php';
+require_once PLZ_PATH . 'blocks/news/index.php';

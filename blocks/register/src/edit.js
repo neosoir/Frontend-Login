@@ -1,4 +1,8 @@
-import { InspectorControls, RichText } from "@wordpress/block-editor";
+/* Functionalitis of reac (state of text botton) */
+import { useState } from "@wordpress/element";
+
+/*  */
+import { BlockControls, InspectorControls, RichText } from "@wordpress/block-editor";
 
 /* Site bar with options */
 import { Panel, PanelBody, TextControl } from "@wordpress/components";
@@ -6,11 +10,13 @@ import { Panel, PanelBody, TextControl } from "@wordpress/components";
 const Edit = ( props ) => {
 
     const { className, attributes, setAttributes } = props;
-    const { title, nameLabel, emailLabel, passwordLabel } = attributes;
+    const { title, text, nameLabel, emailLabel, passwordLabel } = attributes;
+    const [ hasText, setHasText ] = useState( text );
 
     return (
 
         <>
+        {/* Side bar controls */}
         <InspectorControls>
             <Panel>
                 <PanelBody title="Labels" initialOpen={true}>
@@ -33,6 +39,20 @@ const Edit = ( props ) => {
             </Panel>
         </InspectorControls>
 
+        {/* Button of text control */}
+        <BlockControls
+
+            controls = {[
+                {
+                    icon: "text",
+                    title: "Add text",
+                    isActive: text || hasText,
+                    onClick: () => setHasText( ! hasText )
+                }
+            ]}
+
+        />
+
         <div className={ className }>
             <div className="signin__container">
                 {/* Make a custom title */}
@@ -40,9 +60,21 @@ const Edit = ( props ) => {
                     tagName="h1"
                     placeholder="Escribe un titulo"
                     className="sigin__titulo"
-                    value={title}
+                    value={ title }
                     onChange= { ( newTitle ) => setAttributes( { title: newTitle } ) }
                 />
+
+                {/* Conditional label of text */}
+                { ( text || hasText ) &&
+                    <RichText 
+                        tagName="p"
+                        placeholder="Escribe un parrafo"
+                        className="sigin__titulo"
+                        value={ text }
+                        onChange= { ( newText ) => setAttributes( { text: newText } ) }
+                    />
+                }
+
                 <form className="signin__form" id="signup">
                     <div className="signin__name name--campo">
                         <label for="Name">{ nameLabel }</label>
