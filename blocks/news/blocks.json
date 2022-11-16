@@ -1,0 +1,14 @@
+{
+
+    "apiVersion": 2,
+    "name": "plz/news",
+    "title": "news",
+    "category": "widgets",
+    "icon": "list-view",
+    "description": "Show news.",
+    "keywords": [ "posts", "news", "plz" ],
+    "version": "0.0.1",
+    "textdomain": "plz",
+    "editorScript": "file:./build/index.js"
+
+}
