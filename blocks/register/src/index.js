@@ -1,11 +1,13 @@
-import {registerBlockType} from "@wordpress/blocks";
+import { registerBlockType } from "@wordpress/blocks";
+import edit from "./edit";
+import "./styles.scss";
 
-registerBlockType('plz/register', {
+registerBlockType( "plz/register", {
 
-    title: 'register',
-    category: 'widgets',
-    icon:   'admin-users',
-    edit: () => <h2>Register</h2>,
-    save: () => <h2>Register</h2>
+  title: "Register",
+  category: "widgets",
+  icon: "admin-users",
+  edit,
+  save: () => <h2>Register</h2>
 
-});
+} );
